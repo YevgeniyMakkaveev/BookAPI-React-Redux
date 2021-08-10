@@ -65,7 +65,7 @@ const bookSlice = createSlice({
     name: "",
     field: "all",
     priority: "relevance",
-    total: 0,
+    total: null,
     loading: null,
     books: null,
     errorMsg: null,
@@ -92,8 +92,9 @@ const bookSlice = createSlice({
       state.loading = true;
     },
     [fetchMoreBooks.fulfilled]: (state, action) => {
-      console.log(action);
+      console.log(action + "фулфилд");
       state.loading = false;
+      state.total = action.totalItems;
       if (action.payload) {
         state.books = action.payload;
       }

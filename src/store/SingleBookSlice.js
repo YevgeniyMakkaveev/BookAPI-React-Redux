@@ -14,6 +14,8 @@ export const fetchSingleBooks = createAsyncThunk(
       dispatch(
         getSelecedBook({
           data: book,
+          loading: null,
+          errorMsg: null,
         })
       );
     } catch (error) {
@@ -31,9 +33,8 @@ const SingleBookSlice = createSlice({
   },
   reducers: {
     getSelecedBook(state, action) {
-      console.log(state, action);
       state.data = action.payload.data;
-      state.loading = false;
+      state.loading = null;
       state.errorMsg = null;
       console.log(state.data);
     },
@@ -55,4 +56,5 @@ const SingleBookSlice = createSlice({
   },
 });
 const { getSelecedBook } = SingleBookSlice.actions;
+export const { removeSelecedBook } = SingleBookSlice.actions;
 export default SingleBookSlice.reducer;

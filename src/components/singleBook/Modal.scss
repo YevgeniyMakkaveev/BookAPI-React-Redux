@@ -1,0 +1,61 @@
+@import "../../styleCommon/var";
+
+.modal__wrapper{
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+width: 100%;
+z-index: 9999;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgba(0, 0, 0, 0.25);
+animation-name: appear;
+animation-duration: 300ms;
+}
+
+.modal__body{
+ width: 90vw;
+ background-color: $card_info;
+ min-height: 50vh;
+ max-height: 100vh;
+ .modal__category{
+  padding-bottom: 1rem;
+  color: $colour_gray;
+  font-size: 1.1rem;
+ }
+.modal__upper{
+ display: flex;
+ flex-direction: row;
+ padding: 0 1rem;
+}
+.modal__img{
+flex: auto;
+}
+.modal__img img{
+ max-width: 500px;
+ min-width: 300px;
+ height: 100%;
+ max-height: 600px;
+ max-height: 40vh;
+}
+.modal__other{
+ padding: 1rem;
+  flex: auto;
+  display: flex;
+  justify-content: center;
+
+}
+.modal__list{
+ font-size: 1.2rem;
+ list-style: none;
+text-align: left;
+}
+.modal__desc{
+ text-align: left;
+ padding: 1rem 1rem;
+ font-size: 0.9rem;
+}
+}
