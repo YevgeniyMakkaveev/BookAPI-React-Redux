@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700&display=swap");
+*{
+ margin: 0;
+ padding: 0;
+}
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+html{
+  
+  background-color: #fff1e6;
+  background-size: cover;
+  font-size: 20px;
+  height: '100vh';
+  min-height: '100vh';
+  font-family: "Barlow",
+   sans-serif;
+}
+body{
+max-width: 1920px;
+margin: 0 auto !important;
+box-sizing: border-box;
+width: auto;
+}

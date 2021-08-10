@@ -1,0 +1,60 @@
+@import "../../styleCommon/var";
+
+.head{
+ background-image: url(../../imgs/book.jpg);
+ width: 100%;
+ padding-bottom: 2rem;
+
+ .head__title{
+  padding: 1.5rem 0;
+ }
+ .brown{
+  font-size: 4rem !important;
+  color: $colour_brown;
+  font-weight: 700;
+  letter-spacing: .01em;
+text-shadow: .022em .022em .022em rgb(255, 252, 252)
+ }
+ .input__field{
+  margin: 1rem 0;
+  background-color: $bClour1;
+  font-size: 1.5rem;
+  width: 70%;
+  border: 0;
+ }
+ .btn{
+  margin-left: -3.5rem;
+  font-size: 1.5rem;
+  background-color: $colour_yellow;
+  outline:0;
+  border: 0;
+  padding: 0 0.5em;
+ }
+ .btn:hover{
+  background-color: $colour_brown;
+  color: whitesmoke;
+ }
+ .selectors{
+  margin: 0.5rem 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+   .selector__group {
+    margin: 0 2rem;
+    background:rgba(0, 0, 0, 0.6)
+   }
+   select{
+    background-color: $bClour1;
+    padding: 0.2em;
+   }
+   .selector__title{
+    color: whitesmoke;
+    padding: 0 1em 0 1em;
+   }
+
+ }
+
+
+
+}
+

@@ -1,0 +1,19 @@
+@import "../../styleCommon/var";
+
+.wrapper{
+ margin: 2rem 0;
+.nest__wrapper {
+ display: flex;
+ flex-wrap: wrap;
+ margin: 2rem;
+ justify-content: center;
+}
+.btn__more {
+ background-color: $colour_brown;
+ border: 0;
+ font-size: 2rem;
+ color: white;
+ padding: 0 5rem;
+}
+}
+
