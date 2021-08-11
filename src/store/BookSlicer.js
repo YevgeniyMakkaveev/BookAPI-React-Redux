@@ -12,7 +12,7 @@ export const fetchBooks = createAsyncThunk(
         throw new Error("Server Error");
       }
       const data = await response.json();
-      console.log(data);
+
       dispatch(
         getInitBooks({
           books: data.items,
@@ -46,7 +46,6 @@ export const fetchMoreBooks = createAsyncThunk(
       }
       const data = await response.json();
       const finalData = books.concat(data.items);
-      console.log(finalData);
       return finalData;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -92,7 +91,6 @@ const bookSlice = createSlice({
       state.loading = true;
     },
     [fetchMoreBooks.fulfilled]: (state, action) => {
-      console.log(action + "фулфилд");
       state.loading = false;
       if (action.payload) {
         state.books = action.payload;

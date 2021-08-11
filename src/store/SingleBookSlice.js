@@ -9,7 +9,6 @@ export const fetchSingleBooks = createAsyncThunk(
         throw new Error("Server Error");
       }
       const book = await response.json();
-      console.log(book);
       dispatch(
         getSelecedBook({
           data: book,
@@ -35,7 +34,6 @@ const SingleBookSlice = createSlice({
       state.data = action.payload.data;
       state.loading = null;
       state.errorMsg = null;
-      console.log(state.data);
     },
     removeSelecedBook(state) {
       state.data = null;

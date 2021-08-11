@@ -2,7 +2,7 @@ import { fetchSingleBooks } from "../../store/SingleBookSlice";
 import { useDispatch } from "react-redux";
 import defaultImg from "../../imgs/book-template.png";
 import "./BookItem.scss";
-const BookItem = ({ data, count, getLink }) => {
+const BookItem = ({ data, getLink }) => {
   const {
     title,
     description,
@@ -13,6 +13,11 @@ const BookItem = ({ data, count, getLink }) => {
     categories,
   } = data;
   const dispatch = useDispatch();
+  const notTooMuch = (str, limit) => {
+    if (str.length > limit) {
+      return str.slice(0, limit) + "...";
+    } else return str;
+  };
   const getImg = (img) => {
     if (img) {
       return img.thumbnail ? img.thumbnail : img.smallThumbnail;
@@ -52,9 +57,9 @@ const BookItem = ({ data, count, getLink }) => {
         </div>
         <div className="card__right">
           <p className="card__category"> {getCategory(categories)}</p>
-          <h3>{title}</h3>
-          <p> {getAuthor(authors)}</p>
-          <p>
+          <h3 className="card__title">{notTooMuch(title, 60)}</h3>
+          <p className="card__authors"> {getAuthor(authors)}</p>
+          <p className="card__publisher">
             {publisher} {publishedDate}
           </p>
         </div>

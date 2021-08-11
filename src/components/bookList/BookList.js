@@ -14,7 +14,7 @@ const BookList = () => {
 
   const counter =
     totalBooks > 0 ? (
-      <p> Found {totalBooks} books </p>
+      <p className="total__cards"> Found {totalBooks} books </p>
     ) : (
       <p> No books found </p>
     );
@@ -26,13 +26,12 @@ const BookList = () => {
   ) : null;
 
   const cards = data ? (
-    <div>
-      <div className="nest__wrapper">
+    <>
+      <div className="card__wrapper">
         {data.map((item) => (
           <BookItem
             key={count++}
             data={item ? item.volumeInfo : item}
-            count={count++}
             getLink={item.selfLink}
           />
         ))}
@@ -40,12 +39,12 @@ const BookList = () => {
       <button className="btn__more" onClick={() => dispatch(fetchMoreBooks())}>
         MORE
       </button>
-    </div>
+    </>
   ) : null;
 
   const content =
     totalBooks !== null ? (
-      <div className="wrapper">
+      <div className="content__wrapper">
         {counter}
         {loader}
         {cards}
@@ -57,7 +56,7 @@ const BookList = () => {
   if (errorStatus) {
     return <div className="error__booklist">{errorStatus}</div>;
   }
-  return <div>{content}</div>;
+  return <>{content}</>;
 };
 
 export default BookList;

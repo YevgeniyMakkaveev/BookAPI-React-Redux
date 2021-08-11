@@ -1,49 +1,90 @@
 @import "../../styleCommon/var";
 
-.card{
-width: 400px;
-min-height: 250px;
-margin:  1em;
-position: relative;
-cursor: pointer;
-box-shadow: 0 5px 10px rgba(54, 47, 3, 0.05),
-0 15px 40px rgba(0, 0, 0, 0.1);
-padding: 2em 0;
-max-height: 30vh;
-overflow: hidden;
+.card {
+  width: 400px;
+  height: auto;
+  max-height: 500px;
+  margin: 1em;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(54, 47, 3, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
+  max-height: 30vh;
+  overflow: hidden;
 
-.card__wrapper {
- display: flex;
-}
-.card__right{
- display: flex;
- flex-direction: column;
- justify-content: center;
- .card__category {
-  color: $colour_gray;
- }
-}
+  .card__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card__img {
+    max-width: 100px;
+    height: auto;
+  }
+  .card__right {
+    max-width: 50%;
+    min-width: 40% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
+    .card__category {
+      color: $colour_gray;
+      font-size: 0.7rem;
+    }
+
+    .card__title {
+      font-size: 0.8rem;
+    }
+
+    .card__authors,
+    .card__publisher {
+      font-size: 0.8rem;
+    }
+  }
 }
 .description {
- background-color: $card_info;
- padding: 3rem 1rem 1rem;
- position: absolute;
- left: 0;
- bottom: 0;
- right: 0;
- max-height: 90%;
- font-size: 0.8em;
- transform: translateY(110%);
- overflow: hidden;
- text-overflow: clip;
- transition: transform 0.3s ease-in;
-}
-.card__img{
- max-width: 150px;
- height: 100%;
+  background-color: $card_info;
+  padding: 3rem 1rem 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 90%;
+  font-size: 0.7em;
+  transform: translateY(110%);
+  overflow: hidden;
+  text-overflow: clip;
+  transition: transform 0.3s ease-in;
 }
 
 .card:hover .description {
- transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+@media screen and (min-width: $breakpoint-mobile) {
+  .card {
+    min-height: 350px;
+  }
+
+  .card__right {
+    justify-content: space-between !important;
+  }
+
+  .card__category,
+  .card__authors,
+  .card__publisher {
+    font-size: 0.9rem !important;
+  }
+
+  .card__title {
+    font-size: 1rem !important;
+  }
+
+  .description {
+    font-size: 0.85em !important;
+  }
+
+  .card__img {
+    max-width: 220px !important;
+    padding: 2em 0;
+  }
 }

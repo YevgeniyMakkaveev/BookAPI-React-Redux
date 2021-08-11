@@ -1,7 +1,6 @@
 import defaultImg from "../../../imgs/book-template.png";
 import "./SingleBook.scss";
 const CreateModalText = ({ data }) => {
-  console.log(data);
   const {
     description,
     categories,
@@ -14,12 +13,8 @@ const CreateModalText = ({ data }) => {
   } = data;
   const checkImg = (imgArr) => {
     if (imgArr) {
-      if (imgArr.extraLarge) {
-        return imgArr.extraLarge;
-      } else if (imgArr.large) {
-        return imgArr.large;
-      } else if (imgArr.medium) {
-        return imgArr.medium;
+      if (imgArr.thumbnail) {
+        return imgArr.thumbnail;
       } else {
         return defaultImg;
       }

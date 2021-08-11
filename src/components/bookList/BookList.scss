@@ -1,38 +1,45 @@
 @import "../../styleCommon/var";
 
-.wrapper{
- margin: 2rem 0;
-.nest__wrapper {
- display: flex;
- flex-wrap: wrap;
- margin: 2rem;
- justify-content: center;
+.content__wrapper {
+  margin: 2rem 0;
+
+  .card__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem;
+    justify-content: center;
+  }
+
+  .btn__more {
+    background-color: $colour_yellow;
+    border: 0;
+    font-size: 2rem;
+    padding: 0 5rem;
+    cursor: pointer;
+  }
+
+  .btn__more:hover {
+    background-color: $colour_brown;
+    color: white;
+  }
 }
-.btn__more {
- background-color: $colour_brown;
- border: 0;
- font-size: 2rem;
- color: white;
- padding: 0 5rem;
-}
-}
-.spinner__wrapper{
- position: fixed;
- top: 0;
- bottom: 0;
- left: 0;
- right: 0;
- width: 100%;
- z-index: 9999;
- display: flex;
- align-items: center;
- justify-content: center;
- background-color: rgba(0, 0, 0, 0.25);
- animation-name: appear;
- animation-duration: 300ms;
-}
-.error__booklist{
- font-size: 1.5em;
- color: red;
+.spinner__wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  animation-name: appear;
+  animation-duration: 300ms;
 }
 
+.error__booklist {
+  font-size: 1.5em;
+  color: red;
+}

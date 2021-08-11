@@ -46,7 +46,7 @@ const Head = () => {
         <h1 className="brown"> BOOK-API 2.0</h1>
       </div>
       <div className="input__wrapper">
-        <form onSubmit={onSubmit}>
+        <form className="input__form" onSubmit={onSubmit}>
           <input
             className="input__field"
             value={text}
