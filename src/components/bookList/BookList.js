@@ -55,7 +55,7 @@ const BookList = () => {
     );
 
   if (errorStatus) {
-    return <p>{errorStatus}</p>;
+    return <div className="error__booklist">{errorStatus}</div>;
   }
   return <div>{content}</div>;
 };

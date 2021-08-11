@@ -44,7 +44,11 @@ const BookItem = ({ data, count, getLink }) => {
     >
       <div className="card__wrapper">
         <div className="card__left">
-          <img src={getImg(imageLinks)} alt="book_cover" />
+          <img
+            className="card__img"
+            src={getImg(imageLinks)}
+            alt="book_cover"
+          />
         </div>
         <div className="card__right">
           <p className="card__category"> {getCategory(categories)}</p>

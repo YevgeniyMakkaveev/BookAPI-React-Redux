@@ -3,7 +3,6 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const fetchSingleBooks = createAsyncThunk(
   "singleBookSlice/getBook",
   async function (params, { rejectWithValue, dispatch }) {
-    console.log(params);
     try {
       const response = await fetch(params);
       if (!response.ok) {
