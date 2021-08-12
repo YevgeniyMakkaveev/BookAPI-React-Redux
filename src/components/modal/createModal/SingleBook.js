@@ -51,7 +51,7 @@ const CreateModalText = ({ data }) => {
           </ul>
         </div>
       </div>
-      <div>{descText}</div>
+      {descText}
     </div>
   );
 };

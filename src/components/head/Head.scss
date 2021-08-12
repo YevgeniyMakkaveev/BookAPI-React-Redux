@@ -57,19 +57,29 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     .selector__group {
-      margin: 0 2rem;
+      margin: 1rem 2rem;
       background: rgba(0, 0, 0, 0.6);
     }
     select {
       background-color: $bClour1;
-      padding: 0.2em 1em;
       text-align: center;
+      align-self: flex-end;
     }
 
     .selector__title {
       color: whitesmoke;
-      padding: 0 1em 0 1em;
+      padding: 0 1em 0 0;
     }
   }
+}
+@media screen and (min-width: $breakpoint-mobile) {
+  .selector__title {
+    padding: 0 1em;
+  }
+  select {
+    padding: 0.2em 1em;
+  }
+
 }

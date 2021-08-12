@@ -20,7 +20,8 @@ const BookItem = ({ data, getLink }) => {
   };
   const getImg = (img) => {
     if (img) {
-      return img.thumbnail ? img.thumbnail : img.smallThumbnail;
+      if (img.thumbnail) return img.thumbnail;
+      else if (img.smallThumbnail) return img.smallThumbnail;
     } else {
       return defaultImg;
     }

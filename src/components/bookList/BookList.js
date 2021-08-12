@@ -50,7 +50,7 @@ const BookList = () => {
         {cards}
       </div>
     ) : (
-      <div>{loader}</div>
+      <>{loader}</>
     );
 
   if (errorStatus) {
