@@ -44,6 +44,14 @@ const Head = () => {
 
   return (
     <div className="head">
+      <a
+        rel="noreferrer"
+        className="head__link"
+        target="_blank"
+        href="https://github.com/YevgeniyMakkaveev"
+      >
+        made by Yevgeny Makkaveev
+      </a>
       <div className="head__title">
         <h1 className="brown"> BOOK-API 2.0</h1>
       </div>

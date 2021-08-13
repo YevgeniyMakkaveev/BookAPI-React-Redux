@@ -16,7 +16,13 @@
     letter-spacing: 0.01em;
     text-shadow: 0.022em 0.022em 0.022em rgb(255, 252, 252);
   }
-
+  .head__link{
+    font-size: 0.5em;
+    text-decoration: none;
+    color: $rosewood;
+    width: 100%;
+   text-align: left;
+  }
   .input__form {
     display: flex;
     justify-content: center;
@@ -76,7 +82,7 @@
 }
 @media screen and (min-width: $breakpoint-mobile) {
   .selector__title {
-    padding: 0 1em;
+    padding: 0 1em !important;
   }
   select {
     padding: 0.2em 1em;

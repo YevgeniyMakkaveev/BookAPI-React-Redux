@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
+import key, { api } from "../const";
 export const fetchBooks = createAsyncThunk(
   "bookSlice/getInit",
   async function (params, { rejectWithValue, dispatch }) {
     const { title, field, priority } = params;
     try {
       const response = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${title}&maxResults=30&orderBy=${priority}&subject=${field}:keyes&key=AIzaSyAse8WG5nA-_-AdTK_4wpa4CUF5fmqc8zE`
+        `${api}/volumes?q=${title}&maxResults=30&orderBy=${priority}&subject=${field}:${key}`
       );
       if (!response.ok) {
         throw new Error("Server Error");
@@ -39,7 +39,7 @@ export const fetchMoreBooks = createAsyncThunk(
     }
     try {
       const response = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${name}&startIndex=${index}&maxResults=30&orderBy=${priority}&subject=${field}:keyes&key=AIzaSyAse8WG5nA-_-AdTK_4wpa4CUF5fmqc8zE`
+        `${api}/volumes?q=${name}&startIndex=${index}&maxResults=30&orderBy=${priority}&subject=${field}:${key}`
       );
       if (!response.ok) {
         throw new Error("Server Error");

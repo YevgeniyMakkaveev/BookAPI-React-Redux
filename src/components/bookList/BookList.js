@@ -27,7 +27,7 @@ const BookList = () => {
 
   const cards = data ? (
     <>
-      <div className="card__wrapper">
+      <div className="cards__wrapper">
         {data.map((item) => (
           <BookItem
             key={count++}
