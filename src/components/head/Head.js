@@ -28,16 +28,18 @@ const Head = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    dispatch(
-      fetchBooks({
-        title: text.toLowerCase(),
-        field: field,
-        priority: priority,
-      })
-    );
-    setText("");
-    setField("all");
-    setPriority("relevance");
+    if (text.length > 0) {
+      dispatch(
+        fetchBooks({
+          title: text.toLowerCase(),
+          field: field,
+          priority: priority,
+        })
+      );
+      setText("");
+      setField("all");
+      setPriority("relevance");
+    }
   };
 
   return (
