@@ -16,12 +16,12 @@
     letter-spacing: 0.01em;
     text-shadow: 0.022em 0.022em 0.022em rgb(255, 252, 252);
   }
-  .head__link{
+  .head__link {
     font-size: 0.5em;
     text-decoration: none;
     color: $rosewood;
     width: 100%;
-   text-align: left;
+    text-align: left;
   }
   .input__form {
     display: flex;
@@ -32,12 +32,13 @@
 
   .input__field {
     min-width: 350px;
+    border-radius: 0.2em;
     margin: 1rem 0;
     background-color: $bClour1;
     font-size: 1.5rem;
     width: 70%;
     border: 0;
-    padding: 0 0 0 0.5em;
+    padding: 0 0 4px 0.5em;
   }
 
   .input__field:focus {
@@ -48,6 +49,8 @@
     max-height: 40px;
     font-size: 1.5rem;
     background-color: $colour_yellow;
+    box-shadow: 0 5px ($colour_yellowShadow);
+    border-radius: 0.2em;
     outline: 0;
     border: 0;
     padding: 0 0.5em;
@@ -55,6 +58,7 @@
   }
   .btn:hover {
     background-color: $colour_brown;
+    box-shadow: 0 5px ($rosewood);
     color: whitesmoke;
   }
 
@@ -70,6 +74,7 @@
     }
     select {
       background-color: $bClour1;
+      border-radius: 0.2em;
       text-align: center;
       align-self: flex-end;
     }
@@ -87,5 +92,4 @@
   select {
     padding: 0.2em 1em;
   }
-
 }

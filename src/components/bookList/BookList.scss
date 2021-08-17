@@ -11,6 +11,8 @@
 
   .btn__more {
     background-color: $colour_yellow;
+    box-shadow: 0 5px ($colour_yellowShadow);
+    border-radius: 0.3em;
     border: 0;
     font-size: 2rem;
     padding: 0 5rem;
@@ -19,6 +21,7 @@
 
   .btn__more:hover {
     background-color: $colour_brown;
+    box-shadow: 0 5px ($rosewood);
     color: white;
   }
 }
